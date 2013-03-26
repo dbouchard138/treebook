@@ -10,6 +10,16 @@ class User < ActiveRecord::Base
                   :first_name, :last_name, :profile_name
   # attr_accessible :title, :body
 
+  # validates :first_name, presnce: true  
+
+  # validates :last_name, presnce: true  
+
+  # validates :profile_name, presnce: true  
+
+
+
+  has_many :statuses
+
   def full_name
   	first_name + " " + last_name
   end
